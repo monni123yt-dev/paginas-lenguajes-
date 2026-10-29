@@ -1,0 +1,173 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, ;
+  background-color: #5e74d6;
+  color: #e0e0e0;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border: #1e1e1e;
+   font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.leyenda {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.leyenda li {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+
+.taller {
+  background-color: #1d4ed8; 
+  color: #ffffff;
+}
+
+.muestra {
+  background-color: #b91c1c; 
+  color: #ffffff;
+}
+
+.ensayo {
+  background-color: #047857; 
+  color: #ffffff;
+}
+
+
+.desplazar {
+  width: 100%;
+  overflow-x: auto; 
+  padding-bottom: 1rem;
+}
+
+
+.agenda {
+  display: grid;
+
+  grid-template-columns: 70px repeat(6, 1fr);
+  grid-template-rows: 44px repeat(10, 52px);
+  background-color: #333333;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 6px;
+  min-width: 720px;
+}
+.dia {
+  background-color: #1e1e1e;
+  color: #f5a623;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1;
+}
+
+.hora {
+  background-color: #1e1e1e;
+  color: #a0a0a0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1; 
+}
+
+
+.dia-lun { grid-column: 2; }
+.dia-mar { grid-column: 3; }
+.dia-mie { grid-column: 4; }
+.dia-jue { grid-column: 5; }
+.dia-vie { grid-column: 6; }
+.dia-sab { grid-column: 7; }
+
+.hora-08 { grid-row: 2; }
+.hora-09 { grid-row: 3; }
+.hora-10 { grid-row: 4; }
+.hora-11 { grid-row: 5; }
+.hora-12 { grid-row: 6; }
+.hora-13 { grid-row: 7; }
+.hora-14 { grid-row: 8; }
+.hora-15 { grid-row: 9; }
+.hora-16 { grid-row: 10; }
+.hora-17 { grid-row: 11; }
+
+
+.actividad {
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.actividad h2 {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.actividad p {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.actividad-1 {
+  grid-column: 2;        
+  grid-row: 2 / span 3;   
+}
+
+
+.actividad-2 {
+  grid-column: 4 / 6;     
+  grid-row: 7 / 9;     
+}
+
+
+.actividad-3 {
+  grid-column: 3;         
+  grid-row: 3 / 6;      
+}
+
+.actividad-4 {
+  grid-column: 6 / 8;     
+  grid-row: 10 / 12;     
+}
+
+.actividad-5 {
+  grid-column: 2;        
+  grid-row: 8 / 11;     
+}
+
+.actividad-6 {
+  grid-column: 5;         
+  grid-row: 3 / 5;
+}
+
+.actividad-7 {
+  grid-column: 7;         
+  grid-row: 2 / 5;      
+}

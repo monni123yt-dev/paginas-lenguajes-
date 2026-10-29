@@ -1,0 +1,111 @@
+
+* {
+  box-sizing: border-box;
+  margin: 2px;
+  padding: 2px;
+}
+
+body {
+  font-family: Arial;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 2rem 1rem;
+}
+
+header {
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+
+.procedencia {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #b0b0b0;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-left: 4px solid #f5a623;
+  border-radius: 4px;
+}
+
+
+.mosaico {
+  display: grid;
+  /* REQUISITO 1: Columnas adaptativas de mínimo 180px y filas automáticas de 160px */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 160px;
+  gap: 12px;
+  grid-auto-flow: dense;
+  
+}
+.foto {
+  margin: 0; 
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #222222;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+.foto img {
+  grid-area: 1 / 1; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+
+  
+  filter: grayscale(1);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.foto:hover img,
+.foto:focus-within img {
+  filter: grayscale(0);
+  transform: scale(1.03);
+}
+
+
+.foto figcaption {
+  grid-area: 1 / 1;    
+  align-self: end;     
+  
+
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  line-height: 1.3;
+  z-index: 2; 
+}
+.foto.ancha {
+  grid-column: span 2;
+}
+
+.foto.alta {
+  grid-row: span 2;
+}
+
+.foto.grande {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 420px) {
+  .foto.ancha,
+  .foto.alta,
+  .foto.grande {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

@@ -1,0 +1,134 @@
+
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #1e293b;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .header-brand svg {
+            stroke: #38bdf8;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        /* Contenido principal y Grid */
+        main {
+            flex: 1;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Tarjetas de Botones */
+        .card-btn {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .card-btn:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+            background-color: #334155;
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.2);
+        }
+
+        .icon-wrapper {
+            background-color: #0f172a;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            transition: background-color 0.25s ease;
+        }
+
+        .card-btn:hover .icon-wrapper {
+            background-color: #38bdf8;
+        }
+
+        .icon-wrapper svg {
+            stroke: #38bdf8;
+            transition: stroke 0.25s ease;
+        }
+
+        .card-btn:hover .icon-wrapper svg {
+            stroke: #0f172a;
+        }
+
+        .card-btn h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-btn span {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        .card-btn:hover span {
+            color: #cbd5e1;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #64748b;
+            font-size: 0.875rem;
+            border-top: 1px solid #334155;
+        }

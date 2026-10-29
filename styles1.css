@@ -1,0 +1,80 @@
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+
+  font-family: "Courier New", monospace;
+  background-color: #f2eee9;
+  color: #2b2b2b;
+  margin: 2px;
+  padding: 1rem;
+}
+
+#expediente {
+  width: 560px;
+ /* 560 − 48·2 − 2·2 = 460px */ 
+  padding: 48px;
+  border: 2px solid #8c8275;
+  margin-top: 40px;
+  margin-inline: auto; 
+  background-color: #fffdfa;
+  box-shadow: 0 4px 12px black;
+}
+
+
+h1 {
+  margin-top: 24px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.ficha {
+  font-size: 0.85rem;
+  color: #666;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+
+.sello {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 14px 6px 14px; 
+  margin-left: 12px;
+  
+  border: 4px double currentColor;
+  letter-spacing: 3px;
+
+  
+  filter: blur(0.4px);
+  opacity: 1.85;
+}
+
+#sello-archivo {
+  color: #1a4373;
+  transform: rotate;
+}
+
+#sello-reservado {
+  color: #a32222;
+   
+  transform: rotate (-4deg);
+}
+
+
+.tachado {
+  background-color: #222;
+  color: #222; 
+  padding-inline: 12px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tachado:hover {
+  background-color: #ffe680;
+  color: #000;
+}
